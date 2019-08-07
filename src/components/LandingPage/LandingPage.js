@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, Component} from 'react';
 
 import {connect} from 'react-redux';
 
@@ -8,15 +8,19 @@ import {connect} from 'react-redux';
 // It doesn't dispatch any redux actions or display any part of redux state
 // or even care what the redux state is, so it doesn't need 'connect()'
 
-const LandingPage = () => (
-  <div>
+class LandingPage extends Component {
+
     
-    <p>
-      Landing Page
-    </p>
-  </div>
-);
+  render(){
 
-
+   return(
+        <div>
+            <div>
+                <p>Landing Page</p>
+            </div>
+        </div>
+        );
+}
+}
 
 export default connect()(LandingPage);

@@ -16,6 +16,8 @@ import LandingPage from '../LandingPage/LandingPage';
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
+import GalleryPage from '../GalleryPage/GalleryPage';
+import GalleryItemPage from '../GalleryItemPage/GalleryItemPage';
 
 import './App.css';
 
@@ -80,6 +82,11 @@ state = {
               path="/info"
               component={InfoPage}
             />
+
+            <ProtectedRoute
+              exact
+              path="/gallery"
+              component={GalleryPage}/>
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
           </Switch>

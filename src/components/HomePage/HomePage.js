@@ -2,11 +2,10 @@ import {React, Component} from 'react';
 
 
 
-class GalleryPage extends Component{
+class HomePage extends Component{
 
-    
     render(){
-        return (
+         return (
             <div>
                 <div>
                     <p>Gallery Page</p>
@@ -16,4 +15,4 @@ class GalleryPage extends Component{
     }
 }
 
-export default GalleryPage;
+export default HomePage;
