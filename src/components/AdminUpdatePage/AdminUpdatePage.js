@@ -2,18 +2,18 @@ import React, {Component} from 'react';
 
 
 
-class GalleryItemPage extends Component{
+class AdminUpdatePage extends Component{
 
     
     render(){
         return (
             <div>
                 <div>
-                    <p>Gallery Item Page</p>
+                    <p>Admin Update Item Page</p>
                 </div>
             </div>
         )
     }
 }
 
-export default GalleryItemPage;
+export default AdminUpdatePage;

@@ -13,13 +13,17 @@ import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 
 import LandingPage from '../LandingPage/LandingPage';
-import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
+import GuestHomePage from '../GuestHomePage/GuestHomePage';
 import GalleryPage from '../GalleryPage/GalleryPage';
-import GalleryItemPage from '../GalleryItemPage/GalleryItemPage';
+import AdminHomePage from '../AdminHomePage/AdminHomePage';
+import AboutPage from '../AboutPage/AboutPage';
+import ContactPage from '../ContactPage/ContactPage';
+
 
 import './App.css';
+
 
 class App extends Component {
 
@@ -64,8 +68,12 @@ state = {
             <Route
               exact
               path="/about"
-              component={AboutPage}
-            />
+              component={AboutPage}/>
+            {/* Route to contact page at localhost:3000/contact */}
+            <Route 
+              exact 
+              path = '/contact' 
+              component={ContactPage} />
             {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/home will show the UserPage if the user is logged in.
             If the user is not logged in, the ProtectedRoute will show the 'Login' or 'Register' page.
@@ -82,14 +90,14 @@ state = {
               path="/info"
               component={InfoPage}
             />
-
-            <ProtectedRoute
-              exact
-              path="/gallery"
-              component={GalleryPage}/>
+            <Route exact path='/' component={GuestHomePage} />
+            <Route exact path='/gallery' component={GalleryPage} />
+            <Route exact path='/admin' component={AdminHomePage} />
+          
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
           </Switch>
+          
           <Footer />
         </div>
       </Router>

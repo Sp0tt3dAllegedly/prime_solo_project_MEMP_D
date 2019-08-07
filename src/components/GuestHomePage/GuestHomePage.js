@@ -2,18 +2,17 @@ import React, {Component} from 'react';
 
 
 
-class GalleryItemPage extends Component{
+class GuestHomePage extends Component{
 
-    
     render(){
-        return (
+         return (
             <div>
                 <div>
-                    <p>Gallery Item Page</p>
+                    <p>Guest Home Page</p>
                 </div>
             </div>
         )
     }
 }
 
-export default GalleryItemPage;
+export default GuestHomePage;
