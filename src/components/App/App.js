@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {
   HashRouter as Router,
   Route,
-  Redirect,
   Switch,
 } from 'react-router-dom';
 
@@ -13,6 +12,7 @@ import Footer from '../Footer/Footer';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 
+import LandingPage from '../LandingPage/LandingPage';
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
@@ -20,18 +20,43 @@ import InfoPage from '../InfoPage/InfoPage';
 import './App.css';
 
 class App extends Component {
+
+// Sets initial local state to false value to display landing page upon guest entry
+state = {
+  visible: false
+}
+
   componentDidMount () {
     this.props.dispatch({type: 'FETCH_USER'})
   }
 
   render() {
+  
+  // Conditional rendering using if/else statement 
+  // used to show either Landing Page component or Login/Register view (currently);
+    // this will be altered in the future to direct guests to the main Home Page
+   if (!this.state.visible){
+      return(
+        <div>
+        <LandingPage />
+        <button onClick={()=>{
+          this.setState({visible:true});
+        }}
+        >
+          Enter!
+        </button>
+        </div>
+      )
+    }
+    else if (this.state.visible){
+
     return (
       <Router>
         <div>
           <Nav />
           <Switch>
             {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
-            <Redirect exact from="/" to="/home" />
+            
             {/* Visiting localhost:3000/about will show the about page.
             This is a route anyone can see, no login necessary */}
             <Route
@@ -62,6 +87,7 @@ class App extends Component {
         </div>
       </Router>
   )}
+          }
 }
 
 export default connect()(App);
