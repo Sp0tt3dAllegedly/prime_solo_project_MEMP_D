@@ -3,6 +3,7 @@ import errors from './errorsReducer';
 import loginMode from './loginModeReducer';
 import user from './userReducer';
 import galleryReducer from './galleryReducer';
+import homeContentReducer from './homeContentReducer';
 
 
 // rootReducer is the primary reducer for our entire project
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   loginMode, // will have a value of 'login' or 'registration' to control which screen is shown
   user, // will have an id and username if someone is logged in
   galleryReducer, // contains action to get gallery items from db
+  homeContentReducer, // contains action to get home page content items from db
 });
 
 export default rootReducer;

@@ -13,7 +13,7 @@ class GalleryItemPage extends Component{
                        
                        <div key={item.id}>
 
-                           <img src={item.photo_url} alt="foo" />
+                           <img className='galleryImageItem' src={item.photo_url} alt="foo" />
 
                         </div> 
 
