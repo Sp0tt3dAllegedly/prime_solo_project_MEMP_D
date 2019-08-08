@@ -9,8 +9,8 @@ import GalleryItemPage from '../GalleryItemPage/GalleryItemPage';
 class GalleryPage extends Component{
 
     componentDidMount() {
-        this.props.dispatch({type: 'FETCH_GALLERY'});
-        
+        this.props.dispatch({type: 'FETCH_GALLERY' });
+
     }
     
     render(){

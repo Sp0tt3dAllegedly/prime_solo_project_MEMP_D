@@ -5,8 +5,8 @@ const router = express.Router();
 /**
  * GET route template
  */
-router.get('/gallery', (req, res) => {
-    const sqlText = `SELECT * from 'gallery_items;`;
+router.get('/', (req, res) => {
+    const sqlText = `SELECT * from "gallery_items";`;
 
     pool.query(sqlText)
     .then( (response)=>{
