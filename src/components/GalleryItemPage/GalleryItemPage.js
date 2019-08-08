@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import {connect} from 'react-redux';
 
 
 class GalleryItemPage extends Component{
@@ -8,12 +8,26 @@ class GalleryItemPage extends Component{
     render(){
         return (
             <div>
-                <div>
-                    <p>Gallery Item Page</p>
-                </div>
+                {
+                    this.props.store.galleryReducer.map( item => (
+                       
+                       <div key={item.id}>
+
+                           <img src={item.photo_url} alt="foo" />
+
+                        </div> 
+
+                        )
+                    )
+                }
+
             </div>
         )
     }
 }
 
-export default GalleryItemPage;
+const mapStoreToProps = (store) => ({
+    store
+})
+
+export default connect(mapStoreToProps) (GalleryItemPage);

@@ -5,8 +5,18 @@ const router = express.Router();
 /**
  * GET route template
  */
-router.get('/', (req, res) => {
-    
+router.get('/gallery', (req, res) => {
+    const sqlText = `SELECT * from 'gallery_items;`;
+
+    pool.query(sqlText)
+    .then( (response)=>{
+        res.send(response.rows);
+    })
+    .catch ( (error)=>{
+        console.log('error with router get...', error);
+        res.sendStatus(500);
+        
+    })
 });
 
 /**
