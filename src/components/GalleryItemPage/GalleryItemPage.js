@@ -7,7 +7,7 @@ class GalleryItemPage extends Component{
     handleImageClick =(item)=> {
         this.props.dispatch({type: 'FETCH_DETAILS', payload: item.id});
       console.log('clicked image', item.id);
-    this.props.history.push('/');
+    this.props.history.push('/details');
     }
 
     render(){
