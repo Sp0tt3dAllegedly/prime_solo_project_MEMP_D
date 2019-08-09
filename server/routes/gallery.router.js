@@ -19,6 +19,21 @@ router.get('/', (req, res) => {
     })
 });
 
+router.get('/:id', (req, res) => {
+
+    const sqlText= `SELECT * from "gallery_items";`;
+
+    const value = [req.params.id]
+
+    pool.query(sqlText, value)
+    .then( (response) => {
+        res.send(response.rows[0]);
+    })    
+    .catch( (error) => {
+        res.sendStatus(500);
+        alert('could not get those details... try again later');
+    })
+}) 
 
 /*
 **** POST route template

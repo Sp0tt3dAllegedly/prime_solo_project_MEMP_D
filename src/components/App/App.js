@@ -90,12 +90,22 @@ state = {
               path="/info"
               component={InfoPage}
             />
+
+        {/* Routes for guest view pages */}
+
             <Route exact path='/' component={GuestHomePage} />
             <Route exact path='/gallery' component={GalleryPage} />
-            <Route exact path='/admin' component={AdminHomePage} />
             <Route exact path='/details'render={(reduxStore)=>(<GalleryItemDetails {...reduxStore} />)}/>
+
+        {/* Routes for Admin pages */}
+
+            <Route exact path='/admin' component={AdminHomePage} />
+            <Route path='/add' component={AdminAddPage} />
+            <Route path='/update' component={AdminUpdatePage} />
+            
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
+          
           </Switch>
           
           <Footer />
