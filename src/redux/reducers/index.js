@@ -18,6 +18,7 @@ const rootReducer = combineReducers({
   user, // will have an id and username if someone is logged in
   galleryReducer, // contains action to get gallery items from db
   homeContentReducer, // contains action to get home page content items from db
+  detailsReducer, // contains action to get item id specific content from db
 });
 
 export default rootReducer;

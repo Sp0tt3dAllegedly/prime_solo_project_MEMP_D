@@ -17,23 +17,23 @@ class GalleryItemDetails extends Component {
                 <main className='galleryItemDetailsMain'>
                         <div>
 
-                            <img src={this.props.store.details.photo_url} alt='foo'/>
+                            <img src={this.props.store.detailsReducer.photo_url} alt='foo'/>
                             
                             <ul>
                                 <br/>
                                 <br/>
                                     <li>
-                                {this.props.store.details.name}
+                                {this.props.store.detailsReducer.name}
                                     </li>
                                 <br/>
                                 <br/>
                                     <li>
-                                {this.props.store.details.price}
+                                {this.props.store.detailsReducer.price}
                                     </li>
                                 <br/>
                                 <br/>
                                     <li>
-                                {this.props.store.details.description}
+                                {this.props.store.detailsReducer.description}
                                     </li>
                                 <br/>
                                 <br/>
