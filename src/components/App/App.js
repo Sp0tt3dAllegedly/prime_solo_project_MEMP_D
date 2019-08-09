@@ -18,8 +18,11 @@ import InfoPage from '../InfoPage/InfoPage';
 import GuestHomePage from '../GuestHomePage/GuestHomePage';
 import GalleryPage from '../GalleryPage/GalleryPage';
 import AdminHomePage from '../AdminHomePage/AdminHomePage';
+import AdminAddPage from '../AdminAddPage/AdminAddPage';
+import AdminUpdatePage from '../AdminUpdatePage/AdminUpdatePage';
 import AboutPage from '../AboutPage/AboutPage';
 import ContactPage from '../ContactPage/ContactPage';
+import GalleryItemDetails from '../GalleryItemDetails/GalleryItemDetails';
 
 
 import './App.css';

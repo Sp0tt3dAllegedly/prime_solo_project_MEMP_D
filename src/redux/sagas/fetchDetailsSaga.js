@@ -11,7 +11,7 @@ function* fetchDetailsSaga(action) {
         });
     } catch (error) {
         console.log('error getting details', error);
-        alert('could not get movie details');
+        alert('could not get item details');
 
     }
 }

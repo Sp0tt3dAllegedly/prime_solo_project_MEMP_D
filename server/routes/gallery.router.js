@@ -34,9 +34,12 @@ router.get('/:id', (req, res) => {
     
         .then( (response) => {
             res.send(response.rows[0]);
+            
         }) 
 
         .catch( (error) => {
+            console.log('error getting details', error);
+            
             res.sendStatus(500);
             alert('could not get those details... try again later');
         })
@@ -47,7 +50,7 @@ router.get('/:id', (req, res) => {
 **** POST route template
  */
 router.post('/', (req, res) => {
-
+    
 });
 
 module.exports = router;
