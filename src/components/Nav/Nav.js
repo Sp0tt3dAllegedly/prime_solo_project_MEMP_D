@@ -11,21 +11,22 @@ const Nav = (props) => (
     
     <div className="nav-right">
       <Link className="nav-link" to="/">
-        Home
+        Home Page
       </Link> 
       <Link className="nav-link" to="/home">
         {/* Show this link if they are logged in or not,
         but call this link 'Home' if they are logged in,
         and call this link 'Login / Register' if they are not */}
-        {props.user.id ? 'Home' : 'Login / Register'}
+        {props.user.id ? 'Admin Info' : 'Login / Register User'}
+      </Link>
+      <Link className="nav-link" to="/gallery">
+        Gallery
       </Link>
       {/* Always show this link since the about page is not protected */}
       <Link className="nav-link" to="/about">
         About
       </Link>
-      <Link className="nav-link" to="/gallery">
-        Gallery
-      </Link>
+      
       <Link className="nav-link" to="/contact">
             Contact
           </Link>

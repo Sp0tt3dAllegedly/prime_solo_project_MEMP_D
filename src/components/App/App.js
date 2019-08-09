@@ -93,7 +93,7 @@ state = {
             <Route exact path='/' component={GuestHomePage} />
             <Route exact path='/gallery' component={GalleryPage} />
             <Route exact path='/admin' component={AdminHomePage} />
-          
+            <Route exact path='/details'render={(reduxStore)=>(<GalleryItemDetails {...reduxStore} />)}/>
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
           </Switch>
