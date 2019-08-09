@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 class GuestHomePage extends Component{
 
     render(){
+
+        
          return (
             <div>
                  

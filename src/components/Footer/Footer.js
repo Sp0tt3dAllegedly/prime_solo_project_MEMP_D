@@ -8,9 +8,9 @@ import './Footer.css'
 
 const Footer = () => (
   <footer>
-    &copy; Prime Digital Academy
-    <br/>
     &copy; Knecht Creative
+    <br/>
+    &copy; Prime Digital Academy
   </footer>
 );
 
