@@ -7,3 +7,12 @@
     border: solid 5px black;
     margin: 25px 25px;
 }
+
+.alignGallery {
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: 25px;
+}

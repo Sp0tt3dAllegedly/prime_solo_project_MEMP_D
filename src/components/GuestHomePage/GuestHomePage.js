@@ -11,7 +11,8 @@ class GuestHomePage extends Component{
         
 
          return (
-            <div>
+             <div className='center'>
+            <div className='alignGallery'>
                  
                 {
                     this.props.store.homeContentReducer.map( item => (
@@ -26,7 +27,7 @@ class GuestHomePage extends Component{
                     )
                 }
 
-            
+            </div>
             </div>
         )
     }

@@ -46,7 +46,8 @@ state = {
     // this will be altered in the future to direct guests to the main Home Page
    if (!this.state.visible){
       return(
-        <div>
+      
+        <div className = "backgroundImage" >
         <LandingPage />
         <button onClick={()=>{
           this.setState({visible:true});
@@ -55,14 +56,18 @@ state = {
           Enter!
         </button>
         </div>
+       
       )
     }
     else if (this.state.visible){
 
     return (
       <Router>
-        <div>
+       
+        <div className="backgroundImage">
           <Nav />
+          <br/>
+          <br/>
           <Switch>
             {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
             
@@ -114,6 +119,7 @@ state = {
           </Switch>
           
           <Footer />
+          
         </div>
       </Router>
   )}

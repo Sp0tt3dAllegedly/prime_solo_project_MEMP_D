@@ -16,7 +16,7 @@ const UserPage = (props) => (
     <LogOutButton className="log-in" />
     <br/>
     <br/>
-    
+      
   </div>
 );
 

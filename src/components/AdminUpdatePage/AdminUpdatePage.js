@@ -8,8 +8,11 @@ class AdminUpdatePage extends Component{
     render(){
         return (
             <div>
-                <div>
-                    <p>Admin Update Item Page</p>
+                <div className="updateDiv">
+                    <body>
+                        
+                    </body>
+                   
                 </div>
             </div>
         )

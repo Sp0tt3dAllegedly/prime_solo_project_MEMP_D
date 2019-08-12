@@ -16,13 +16,13 @@ class GalleryPage extends Component{
     
     render(){
         return (
-            <div className = 'alignGallery' >
+            < >
                 <div>
                     
                     <GalleryItemPage history={this.props.history}/>
 
                 </div>
-            </div>
+            </>
         )
     }
 }

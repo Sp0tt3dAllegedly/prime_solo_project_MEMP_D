@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import { connect } from 'react-redux';
 
+import '../AdminAddPage/AdminAddPage.css';
 
 class AdminAddPage extends Component {
 
@@ -22,7 +23,7 @@ class AdminAddPage extends Component {
     render(){
 
         return (
-            
+            <body>
                 <div className="addFormDiv">
 
                     <form onSubmit={(event)=>this.addItem(event)}>
@@ -48,7 +49,7 @@ class AdminAddPage extends Component {
                     </form>
 
                 </div>
-            
+            </body>
         )
     }
 }

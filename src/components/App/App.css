@@ -48,22 +48,12 @@ input {
     cursor: pointer;
 }
 
-.alignGallery {
-     display: flex;
-     align-items: flex-start;
-     flex-wrap: wrap;
-     height: 100%;
-     margin: 25px;
+.backgroundImage {
+    background-image: url('https://cdn180.picsart.com/231831737065202.jpg?r1024x1024');
+    background-color: #f6f312; /* Used if the image is unavailable */
+    height: fill; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
 }
 
-
-.galleryItemDetailsMain {
-    align-content: center;
-}
-
-
-
-.addFormDiv {
-    align-content: center;
-    border: solid 5px black;
-}

@@ -6,3 +6,11 @@
     border: solid 5px black;
     margin: 35px 35px;
 }
+
+.alignGallery {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: 25px;
+}

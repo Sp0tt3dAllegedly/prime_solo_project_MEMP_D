@@ -22,7 +22,7 @@ class GalleryItemDetails extends Component {
         if (authStatus === true ) {
 
         return(
-            <>
+            <body>
                 <header className='adminDetailsHeader'>
                     <h1 className='adminDetailsHeaderText'>Admin View: Item Details</h1>
 
@@ -63,14 +63,14 @@ class GalleryItemDetails extends Component {
                         </div>
                                 <br/>
                 </main>
-            </>
+            </body>
         )
     }
     
     else {
         
         return(
-            <>
+            <body>
                 <header className='DetailsHeader'>
                     <h1 className='DetailsHeaderText'>Item Details</h1>
 
@@ -104,7 +104,7 @@ class GalleryItemDetails extends Component {
                         </div>
                                 <br/>
                 </main>
-            </>
+            </body>
         )
     }
 }

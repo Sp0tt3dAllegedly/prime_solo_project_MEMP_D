@@ -1,0 +1,9 @@
+body {
+    background-image: url('/public/images/vaporBackground.jpeg');
+}
+
+.updateDiv {
+    align-content: center nowrap;
+    margin: solid white 7.5px;
+    
+}
