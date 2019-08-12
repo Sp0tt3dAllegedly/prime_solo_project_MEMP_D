@@ -97,8 +97,10 @@ state = {
         {/* Routes for guest view pages */}
 
             <Route exact path='/' component={GuestHomePage} />
-            <Route exact path='/gallery' component={GalleryPage} />
-            <Route exact path='/details' render={(store)=>(<GalleryItemDetails {...store} />)}/>
+            <Route exact path='/gallery' component={GalleryPage } />
+            <Route exact path='/details' 
+                    render={(store)=>(<GalleryItemDetails {...store} 
+                    props={this.state.props} />)}/>
 
         {/* Routes for Admin pages */}
 

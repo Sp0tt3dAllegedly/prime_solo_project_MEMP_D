@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 
-class AdminAddPage extends Component{
+class AdminAddPage extends Component {
 
 
     // set local state to newItem object with db item properties
@@ -20,6 +20,7 @@ class AdminAddPage extends Component{
     }
     
     render(){
+
         return (
             
                 <div className="addFormDiv">

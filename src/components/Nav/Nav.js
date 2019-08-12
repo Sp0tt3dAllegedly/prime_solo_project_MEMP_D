@@ -12,10 +12,6 @@ const Nav = (props) => (
     <div className="nav-right">
       <Link className="nav-link" to="/">
         Home Page
-      </Link> 
-
-      <Link className="nav-link" to="/add">
-        Add an Item
       </Link>
 
       <Link className="nav-link" to="/home">
