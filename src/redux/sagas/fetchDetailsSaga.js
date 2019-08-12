@@ -3,6 +3,8 @@ import Axios from 'axios';
 import {put} from 'redux-saga/effects';
 
 function* fetchDetailsSaga(action) {
+  
+    
     try {
         const response = yield Axios.get(`/api/gallery-list/${action.payload}`);
         yield put({

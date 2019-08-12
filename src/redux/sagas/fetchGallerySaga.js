@@ -6,7 +6,7 @@ function* fetchGallerySaga(){
     try{
         const response = yield Axios.get('/api/gallery-list/');
         yield put({type: 'GET_GALLERY', payload: response.data});
-        console.log(response.data);
+ // console.log(response.data);
         
     }
     catch (error) {

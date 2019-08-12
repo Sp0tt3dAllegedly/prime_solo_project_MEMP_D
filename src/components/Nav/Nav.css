@@ -7,13 +7,13 @@
 }
 
 .header-MEMPD{
-  font-size: 32px;
+  font-size: 53px;
   font-weight: 700;
   color: #f2f2f2f2;
-  padding-bottom: 15px;
+  padding-bottom: 35px;
   padding-top: 15px;
   text-align: center;
-  background-color: #00acb0;
+  background-color: rebeccapurple;
 }
 
 .nav-link {
@@ -33,7 +33,7 @@
 }
 
 .nav-link:hover {
-  background-color: #008183;
+  background-color: fuchsia;
 }
 
 .nav-right {

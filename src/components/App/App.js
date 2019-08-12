@@ -98,7 +98,7 @@ state = {
 
             <Route exact path='/' component={GuestHomePage} />
             <Route exact path='/gallery' component={GalleryPage} />
-            <Route exact path='/details'render={(reduxStore)=>(<GalleryItemDetails {...reduxStore} />)}/>
+            <Route exact path='/details' render={(store)=>(<GalleryItemDetails {...store} />)}/>
 
         {/* Routes for Admin pages */}
 

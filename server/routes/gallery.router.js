@@ -26,13 +26,18 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
 
-    const sqlText= `SELECT * from "gallery_items";`;
+
+    const sqlText = `SELECT "gallery_items"."photo_url", "gallery_items"."name", 
+                            "gallery_items"."price", "gallery_items"."description" from "gallery_items"
+                    WHERE   "gallery_items"."id" = $1;`;
 
     const value = [req.params.id]
 
     pool.query(sqlText, value)
     
         .then( (response) => {
+            console.log(response);
+            
             res.send(response.rows[0]);
             
         }) 
@@ -50,7 +55,7 @@ router.get('/:id', (req, res) => {
 **** POST route template
  */
 router.post('/', (req, res) => {
-    
+
 });
 
 module.exports = router;

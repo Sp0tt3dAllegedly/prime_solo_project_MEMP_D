@@ -1,4 +1,4 @@
-import { all } from 'redux-saga/effects';
+import { all, takeLatest } from 'redux-saga/effects';
 import loginSaga from './loginSaga';
 import registrationSaga from './registrationSaga';
 import userSaga from './userSaga';
@@ -14,13 +14,15 @@ import fetchDetailsSaga from './fetchDetailsSaga';
 // the registration triggers a login
 // and login triggers setting the user
 export default function* rootSaga() {
+  
+  yield takeLatest('FETCH_DETAILS', fetchDetailsSaga);
+
   yield all([
     loginSaga(),
     registrationSaga(),
     userSaga(),
     fetchGallerySaga(),
     fetchHomeContentSaga(),
-    fetchDetailsSaga(),
-    
+
   ]);
 }

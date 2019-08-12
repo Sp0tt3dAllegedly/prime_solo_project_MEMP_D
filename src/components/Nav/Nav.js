@@ -13,6 +13,11 @@ const Nav = (props) => (
       <Link className="nav-link" to="/">
         Home Page
       </Link> 
+
+      <Link className="nav-link" to="/add">
+        Add an Item
+      </Link>
+
       <Link className="nav-link" to="/home">
         {/* Show this link if they are logged in or not,
         but call this link 'Home' if they are logged in,

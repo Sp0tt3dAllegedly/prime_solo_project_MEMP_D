@@ -4,6 +4,10 @@ import React, {Component} from 'react';
 
 class AdminHomePage extends Component{
 
+    handleAddClick = () => {
+        this.history.push('/add');
+    }
+
     render(){
          return (
             <div>

@@ -47,3 +47,46 @@ input {
     border-bottom:1px solid #444; 
     cursor: pointer;
 }
+
+.alignGallery {
+     display: flex;
+     align-items: flex-start;
+     flex-wrap: wrap;
+     height: 100%;
+     margin: 25px;
+}
+
+/* .imageDiv {
+     display: flex;
+     align-items: flex-start;
+     flex-wrap: wrap;
+     height: 100%;
+} */
+
+.galleryImageItem {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    border: solid 5px black;
+    margin: 35px 35px;
+}
+
+.galleryItemDetailsMain {
+    align-content: center;
+}
+
+.homeContentItem {
+
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    border: solid 5px black;
+    margin: 25px 25px;
+}
+
+.addFormDiv {
+    align-content: center;
+    border: solid 5px black;
+}

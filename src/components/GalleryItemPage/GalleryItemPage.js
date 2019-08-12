@@ -12,7 +12,7 @@ class GalleryItemPage extends Component{
 
     render(){
         return (
-            <div>
+            <div className="alignGallery">
                 {
                     this.props.store.galleryReducer.map( item => (
                        

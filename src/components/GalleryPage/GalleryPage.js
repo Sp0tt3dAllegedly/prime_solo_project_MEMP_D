@@ -15,8 +15,8 @@ class GalleryPage extends Component{
     
     render(){
         return (
-            <div>
-                < div className = 'alignGallery'>
+            <div className = 'alignGallery' >
+                <div>
                     
                     <GalleryItemPage history={this.props.history}/>
 

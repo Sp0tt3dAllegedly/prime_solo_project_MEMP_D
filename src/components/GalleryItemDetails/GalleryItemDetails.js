@@ -5,7 +5,11 @@ import {connect} from 'react-redux';
 
 class GalleryItemDetails extends Component {
 
+
+
+
     render(){
+   
         return(
             <>
                 <header className='DetailsHeader'>
@@ -15,9 +19,9 @@ class GalleryItemDetails extends Component {
                 </header>
 
                 <main className='galleryItemDetailsMain'>
-                        <div>
+                        <div className="imageDiv">
 
-                            <img src={this.props.store.detailsReducer.photo_url} alt='foo'/>
+                            <img className="galleryImageItem" src={this.props.store.detailsReducer.photo_url} alt='foo'/>
                             
                             <ul>
                                 <br/>
