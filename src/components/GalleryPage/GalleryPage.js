@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import GalleryItemPage from '../GalleryItemPage/GalleryItemPage';
 
+import '../GalleryPage/GalleryPage.css';
 
 
 

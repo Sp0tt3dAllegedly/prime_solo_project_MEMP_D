@@ -105,9 +105,9 @@ state = {
         {/* Routes for Admin pages */}
 
             <Route exact path='/admin' component={AdminHomePage} />
-            <Route path='/add' component={AdminAddPage} />
-            <Route path='/update' component={AdminUpdatePage} />
-            
+            <Route exact path='/add' component={AdminAddPage} />
+            <Route exact path='/update' component={AdminUpdatePage} />
+           
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
           

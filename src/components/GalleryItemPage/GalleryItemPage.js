@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import '../GalleryItemPage/GalleryItemPage.css'
 
 class GalleryItemPage extends Component{
 

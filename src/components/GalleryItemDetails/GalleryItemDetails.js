@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 
 import {connect} from 'react-redux';
 
+import '../GalleryItemDetails/GalleryItemDetails.css';
 
 class GalleryItemDetails extends Component {
 
 
     handleEditClick = () => {
-        this.props.history.push('/edit');
+        this.props.history.push('/update');
         alert('EDIT MODE ENGAGED');
 
     }
@@ -22,14 +23,14 @@ class GalleryItemDetails extends Component {
 
         return(
             <>
-                <header className='DetailsHeader'>
-                    <h1 className='DetailsHeaderText'>Admin View: Item Details</h1>
+                <header className='adminDetailsHeader'>
+                    <h1 className='adminDetailsHeaderText'>Admin View: Item Details</h1>
 
                         <p> Admin View: Details for this item!</p>
                 </header>
 
-                <main className='galleryItemDetailsMain'>
-                        <div className="imageDiv">
+                <main className='adminGalleryItemDetailsMain'>
+                        <div>
 
                             <img className="galleryImageItem" src={this.props.store.detailsReducer.photo_url} alt='foo'/>
                             

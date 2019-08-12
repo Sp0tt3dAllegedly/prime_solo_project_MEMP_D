@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import { connect } from 'react-redux';
 
+import '../GuestHomePage/GuestHomePage.css';
 
 class GuestHomePage extends Component{
 

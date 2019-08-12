@@ -1,0 +1,8 @@
+.galleryImageItem {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    border: solid 5px black;
+    margin: 35px 35px;
+}
