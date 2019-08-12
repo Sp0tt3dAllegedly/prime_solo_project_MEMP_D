@@ -20,6 +20,22 @@ class AdminAddPage extends Component {
 
     }
     
+
+    handleChangeFor = (event, propertyToChange) => {
+
+        this.setState({
+            [propertyToChange]: event.target.value
+        });
+
+    }
+
+
+    addItem = (event) => {
+        event.preventDefault();
+        console.log(this.state.newItem);
+        this.props.dispatch({type: 'ADD_ITEM', payload: this.state.newItem})
+    }
+
     render(){
 
         return (
@@ -28,7 +44,7 @@ class AdminAddPage extends Component {
 
                     <form onSubmit={(event)=>this.addItem(event)}>
 
-                        <label>Add an item</label>
+                        <label>Item Form</label>
 
                             <input type="text" name="photo_url" placeholder="Photo URL here" 
                             onChange= {(event) => this.handleChangeFor(event, 'photo_url')}
@@ -45,6 +61,8 @@ class AdminAddPage extends Component {
                             <input type="text" name="description" placeholder="Item Description here" 
                             onChange= {(event) => this.handleChangeFor(event, 'description')}
                             value={this.state.newItem.description} />
+
+                        <button type='submit'>Add this Item!</button>
 
                     </form>
 
