@@ -22,6 +22,7 @@ class AdminAddPage extends Component {
     
 
     handleChangeFor = (event, propertyToChange) => {
+            
         console.log(event.target.value);
         
         
@@ -30,15 +31,27 @@ class AdminAddPage extends Component {
             [propertyToChange]: event.target.value
            
         });
-        console.log(this.state);
+            console.log(this.state);
         
     }
 
 
     addItem = (event) => {
+
         event.preventDefault();
-        console.log(this.state);
+
+            console.log(this.state);
+
         this.props.dispatch({type: 'ADD_ITEM', payload: this.state});
+
+    // resets state to blank values after post is sent
+        this.setState({
+
+             photo_url: '',
+                 name: '',
+                 price: '',
+                 description: ''
+        })
     }
 
     render(){

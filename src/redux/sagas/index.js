@@ -1,10 +1,12 @@
 import { all, takeLatest } from 'redux-saga/effects';
+
 import loginSaga from './loginSaga';
 import registrationSaga from './registrationSaga';
 import userSaga from './userSaga';
 import fetchGallerySaga from './fetchGallerySaga';
 import fetchHomeContentSaga from './fetchHomeContentSaga';
 import fetchDetailsSaga from './fetchDetailsSaga';
+import addItemSaga from './addItemSaga';
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -16,6 +18,7 @@ import fetchDetailsSaga from './fetchDetailsSaga';
 export default function* rootSaga() {
   
   yield takeLatest('FETCH_DETAILS', fetchDetailsSaga);
+  
 
   yield all([
     loginSaga(),
@@ -23,6 +26,7 @@ export default function* rootSaga() {
     userSaga(),
     fetchGallerySaga(),
     fetchHomeContentSaga(),
-
+    addItemSaga(),
+    
   ]);
 }
