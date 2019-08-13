@@ -11,35 +11,40 @@ class AdminAddPage extends Component {
 
     state = {
 
-        newItem : {
+        
             photo_url: '',
             name: '',
             price: '',
             description: ''
-        }
+        
 
     }
     
 
     handleChangeFor = (event, propertyToChange) => {
-
+        console.log(event.target.value);
+        
+        
         this.setState({
+          
             [propertyToChange]: event.target.value
+           
         });
-
+        console.log(this.state);
+        
     }
 
 
     addItem = (event) => {
         event.preventDefault();
-        console.log(this.state.newItem);
-        this.props.dispatch({type: 'ADD_ITEM', payload: this.state.newItem})
+        console.log(this.state);
+        this.props.dispatch({type: 'ADD_ITEM', payload: this.state});
     }
 
     render(){
 
         return (
-            <body>
+            
                 <div className="addFormDiv">
 
                     <form onSubmit={(event)=>this.addItem(event)}>
@@ -48,26 +53,26 @@ class AdminAddPage extends Component {
 
                             <input type="text" name="photo_url" placeholder="Photo URL here" 
                             onChange= {(event) => this.handleChangeFor(event, 'photo_url')}
-                            value={this.state.newItem.photo_url} />
+                            value={this.state.photo_url} />
 
                             <input type="text" name="name" placeholder="Item Name here" 
                             onChange= {(event) => this.handleChangeFor(event, 'name')}
-                            value={this.state.newItem.name} />
+                            value={this.state.name} />
 
                             <input type="text" name="price" placeholder="Price in USD (ex. $1.00) here" 
                             onChange= {(event) => this.handleChangeFor(event, 'price')}
-                            value={this.state.newItem.price} />
+                            value={this.state.price} />
 
                             <input type="text" name="description" placeholder="Item Description here" 
                             onChange= {(event) => this.handleChangeFor(event, 'description')}
-                            value={this.state.newItem.description} />
+                            value={this.state.description} />
 
                         <button type='submit'>Add this Item!</button>
 
                     </form>
 
                 </div>
-            </body>
+           
         )
     }
 }

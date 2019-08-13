@@ -51,9 +51,9 @@ input {
 .backgroundImage {
     background-image: url('https://cdn180.picsart.com/231831737065202.jpg?r1024x1024');
     background-color: #f6f312; /* Used if the image is unavailable */
-    height: fill; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    height: stretch; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
