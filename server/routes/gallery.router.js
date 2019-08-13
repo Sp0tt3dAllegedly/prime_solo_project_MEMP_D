@@ -55,7 +55,21 @@ router.get('/:id', (req, res) => {
 **** POST route template
  */
 router.post('/', (req, res) => {
-    
+    const postData = req.body;
+        console.log('req.body is...', req.body);
+    const sqlText = `INSERT INTO "gallery_items" (photo_url, name, price, description)
+                    VALUES ($1, $2, $3, $4);`
+    const values = [postData.photo_url, postData.name, postData.price, postData.description]
+        console.log('values are...', values);
+    pool.query(sqlText, values)
+    .then((result) => {
+        console.log('the new item is posted', result);
+        res.sendStatus(201);
+    })
+    .catch((error) => {
+        console.log(`error with adding ${sqlText}`, error);
+        res.sendStatus(500);
+    })
 
 });
 
