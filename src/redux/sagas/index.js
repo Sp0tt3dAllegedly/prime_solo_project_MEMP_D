@@ -18,15 +18,17 @@ import addItemSaga from './addItemSaga';
 export default function* rootSaga() {
   
   yield takeLatest('FETCH_DETAILS', fetchDetailsSaga);
-  
+  yield takeLatest('ADD_ITEM', addItemSaga);
+  // yield takeLatest('GET_GALLERY', fetchGallerySaga);
+  yield takeLatest('FETCH_HOME_CONTENT', fetchHomeContentSaga);
 
   yield all([
     loginSaga(),
     registrationSaga(),
     userSaga(),
     fetchGallerySaga(),
-    fetchHomeContentSaga(),
-    addItemSaga(),
-    
+    // fetchHomeContentSaga(),
+  
+
   ]);
 }

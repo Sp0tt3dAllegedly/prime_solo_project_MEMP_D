@@ -62,7 +62,7 @@ class AdminAddPage extends Component {
 
                     <form onSubmit={(event)=>this.addItem(event)}>
 
-                        <label>Item Form</label>
+                        <label>Item Form</label> <br/> <br/> 
 
                             <input type="text" name="photo_url" placeholder="Photo URL here" 
                             onChange= {(event) => this.handleChangeFor(event, 'photo_url')}
