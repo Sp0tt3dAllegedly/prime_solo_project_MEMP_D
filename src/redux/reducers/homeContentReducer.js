@@ -2,7 +2,7 @@
 
 const homeContentReducer = (state = [], action) => {
     switch (action.type) {
-        case 'GET_HOME_CONTENT':
+        case 'FETCH_HOME_CONTENT':
             return action.payload;
         default:
             return state;

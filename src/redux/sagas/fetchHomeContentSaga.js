@@ -5,7 +5,7 @@ import {put} from 'redux-saga/effects';
 function* fetchHomeContentSaga(){
     try{
         const response = yield Axios.get('/api/home-page/');
-        yield put({type: 'GET_HOME_CONTENT', payload: response.data});
+        yield put({type: 'FETCH_HOME_CONTENT', payload: response.data});
         console.log(response.data);
         
     }

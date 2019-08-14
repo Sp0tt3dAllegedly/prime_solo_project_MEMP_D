@@ -6,8 +6,12 @@ import '../GuestHomePage/GuestHomePage.css';
 
 class GuestHomePage extends Component{
 
-    render(){
+    componentDidMount() {
+        this.props.dispatch({type: 'GET_HOME_CONTENT' });
+    }
 
+
+    render(){
         
 
          return (

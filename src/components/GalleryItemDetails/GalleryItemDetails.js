@@ -57,9 +57,9 @@ class GalleryItemDetails extends Component {
                             
                             {/* THIS CODE SHOULD DISPLAY DROPDOWN ALERT WITH CONFIRMATION FOR ADMIN */}
 
-                            <button onClick = { e => 
+                            <button onClick = { (e, user) => 
                                     window.confirm("Are you sure you wish to delete item?") &&
-                                    this.props.dispatch({type: 'DELETE_ITEM'})}>Delete Item</button>
+                                    this.props.dispatch({type: 'DELETE_ITEM', payload: user})}>Delete Item</button>
                         </div>
                                 <br/>
                 </main>

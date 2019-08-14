@@ -7,6 +7,7 @@ import fetchGallerySaga from './fetchGallerySaga';
 import fetchHomeContentSaga from './fetchHomeContentSaga';
 import fetchDetailsSaga from './fetchDetailsSaga';
 import addItemSaga from './addItemSaga';
+import deleteItemSaga from './deleteItemSaga';
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -19,14 +20,15 @@ export default function* rootSaga() {
   
   yield takeLatest('FETCH_DETAILS', fetchDetailsSaga);
   yield takeLatest('ADD_ITEM', addItemSaga);
-  // yield takeLatest('GET_GALLERY', fetchGallerySaga);
-  yield takeLatest('FETCH_HOME_CONTENT', fetchHomeContentSaga);
+  yield takeLatest('GET_GALLERY', fetchGallerySaga);
+  yield takeLatest('GET_HOME_CONTENT', fetchHomeContentSaga);
+  yield takeLatest('DELETE_ITEM', deleteItemSaga);
 
   yield all([
     loginSaga(),
     registrationSaga(),
     userSaga(),
-    fetchGallerySaga(),
+    // fetchGallerySaga(),
     // fetchHomeContentSaga(),
   
 

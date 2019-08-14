@@ -9,6 +9,10 @@ import '../GalleryPage/GalleryPage.css';
 
 class GalleryPage extends Component{
 
+    componentDidMount() {
+        this.props.dispatch({type: 'GET_GALLERY' });
+
+    }
     
     render(){
         return (
