@@ -6,6 +6,20 @@ import '../GalleryItemDetails/GalleryItemDetails.css';
 
 class GalleryItemDetails extends Component {
 
+    
+        // THIS CODE WILL DISPLAY DROPDOWN ALERT WITH CONFIRMATION FOR ADMIN TO CONFIRM DELETE
+            // WILL DELETE THE ITEM AND TAKE ADMIN BACK TO GALLERY PAGE
+            
+    handleDeleteClick = (event) => {
+
+        console.log(this.props.store.detailsReducer);
+        
+         window.confirm("Are you sure you wish to delete item?");
+
+        this.props.dispatch({type: 'DELETE_ITEM', payload: this.props.store.detailsReducer.id });
+        
+        this.props.history.push('/gallery/');
+    }
 
     handleEditClick = () => {
         this.props.history.push('/update');
@@ -55,11 +69,9 @@ class GalleryItemDetails extends Component {
                             </ul>
                             <button onClick={this.handleEditClick}>Edit Item</button>
                             
-                            {/* THIS CODE SHOULD DISPLAY DROPDOWN ALERT WITH CONFIRMATION FOR ADMIN */}
+                    
 
-                            <button onClick = { (e, user) => 
-                                    window.confirm("Are you sure you wish to delete item?") &&
-                                    this.props.dispatch({type: 'DELETE_ITEM', payload: user})}>Delete Item</button>
+                            <button onClick = {this.handleDeleteClick}>Delete Item</button>
                         </div>
                                 <br/>
                 </main>

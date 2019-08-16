@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
 
 
-    const sqlText = `SELECT "gallery_items"."photo_url", "gallery_items"."name", 
+    const sqlText = `SELECT "gallery_items"."id","gallery_items"."photo_url", "gallery_items"."name", 
                             "gallery_items"."price", "gallery_items"."description" from "gallery_items"
                     WHERE   "gallery_items"."id" = $1;`;
 
