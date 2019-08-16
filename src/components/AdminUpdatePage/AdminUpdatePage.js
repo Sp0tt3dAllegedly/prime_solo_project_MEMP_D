@@ -40,7 +40,7 @@ state = {
 
             this.props.dispatch({ type: 'EDIT_DETAILS', payload: this.state });
 
-            this.props.history.push('/gallery/');
+            // this.props.history.push('/gallery/');
             
 
         }
@@ -60,7 +60,7 @@ state = {
 
     render(){
         
-        console.log(this.state.photo_url);
+        
         
 
         return (
@@ -68,7 +68,7 @@ state = {
                 <div className="updateDiv">
                     
 
-                    <form onSubmit={(event)=>this.updateItem(event)}>
+                    <form onSubmit={(event)=>this.handleEditSubmit(event)}>
 
                         <label>Update Form</label> <br/> <br/> 
 

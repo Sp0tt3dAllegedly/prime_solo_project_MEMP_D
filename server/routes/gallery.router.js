@@ -51,9 +51,8 @@ router.get('/:id', (req, res) => {
 
 }); 
 
-/*
-**** POST route template
- */
+// ****> POST ROUTE FOR ADDING ITEMS
+
 router.post('/', (req, res) => {
     const postData = req.body;
         console.log('req.body is...', req.body);
@@ -73,6 +72,29 @@ router.post('/', (req, res) => {
 
 });
 
+
+// *****> PUT ROUTE TO EDIT ITEMS ALREADY IN DB TABLES
+
+router.put('/update/:id', (req, res) => {
+
+    let detailsToEdit = req.body;
+    let values = [detailsToEdit.id, detailsToEdit.photo_url, 
+                    detailsToEdit.name, detailsToEdit.price, detailsToEdit.description]
+    
+        const sqlText = `UPDATE "gallery_items" SET "photo_url"=$2 , "name"=$3, "price"=$4, "description"=$5
+                            WHERE "id"=$1;`;
+    
+    pool.query(sqlText, values)
+        .then((response) =>{
+            res.sendStatus(200);
+        })
+        .catch((error) =>{
+            console.log('error editing that...', error);
+            res.sendStatus(500);
+        })
+})
+
+// ******> DELETE ROUTE TO DELETE ITEMS FROM DB
 
 router.delete('/:id', (req, res) =>{
     console.log('id', req.params.id);
