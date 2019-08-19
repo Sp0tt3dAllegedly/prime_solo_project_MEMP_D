@@ -15,16 +15,18 @@ class LandingPage extends Component {
   render(){
 
    return(
-    <>
+    <div className="landingPageHeader">
+  
        <header className='landingPageHeader'>
-                    <h1 className='landingPageText'>LANDING PAGE PLACEHOLDER TEXT</h1>
+                    <h1 className='landingPageText'>MARY EDWORTHY-MCPHERSON DESIGN GALLERY</h1>
                 </header>
         <div>
             <div>
-                <p>Landing Page</p>
+                <p className="landingPTag">Welcome to the Mary Edworthy-McPherson Design Gallery!</p>
             </div>
         </div>
-    </>
+    
+    </div>
         );
 }
 }

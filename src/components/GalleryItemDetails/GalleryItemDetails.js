@@ -44,11 +44,14 @@ class GalleryItemDetails extends Component {
                 </header>
 
                 <main className='adminGalleryItemDetailsMain'>
-                        <div>
+                       
+                        <div className="itemDiv">
+                        
+                        
 
                             <img className="galleryImageItem" src={this.props.store.detailsReducer.photo_url} alt='foo'/>
                             
-                            <ul>
+                            <ul className="itemDetails">
                                 <br/>
                                 <br/>
                                     <li>
@@ -67,12 +70,13 @@ class GalleryItemDetails extends Component {
                                 <br/>
                                 <br/>
                             </ul>
-                            <button onClick={this.handleEditClick}>Edit Item</button>
+                            <button className="detailButtons" onClick={this.handleEditClick}>Edit Item</button>
                             
                     
 
-                            <button onClick = {this.handleDeleteClick}>Delete Item</button>
+                            <button className="detailButtons" onClick = {this.handleDeleteClick}>Delete Item</button>
                         </div>
+                       
                                 <br/>
                 </main>
             </>
@@ -83,37 +87,36 @@ class GalleryItemDetails extends Component {
         
         return(
             <>
-                <header className='DetailsHeader'>
-                    <h1 className='DetailsHeaderText'>Item Details</h1>
+                <header className='detailsHeader'>
+                    <h1 className='detailsHeaderText'>Item Details</h1>
 
                         <p>Details for this item!</p>
                 </header>
 
                 <main className='galleryItemDetailsMain'>
-                        <div className="imageDiv">
+                        <div className="itemDiv">
 
                             <img className="galleryImageItem" src={this.props.store.detailsReducer.photo_url} alt='foo'/>
                             
-                            <ul>
-                                <br/>
-                                <br/>
+                            <ul className="itemDetails">
+                                
                                     <li>
                                 {this.props.store.detailsReducer.name}
                                     </li>
-                                <br/>
-                                <br/>
+                                
                                     <li>
                                 {this.props.store.detailsReducer.price}
                                     </li>
-                                <br/>
-                                <br/>
+                                
+                                
                                     <li>
                                 {this.props.store.detailsReducer.description}
                                     </li>
-                                <br/>
-                                <br/>
+                                
+                                
                             </ul>
                         </div>
+                        
                                 <br/>
                 </main>
             </>

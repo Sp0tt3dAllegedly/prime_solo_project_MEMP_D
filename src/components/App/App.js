@@ -49,12 +49,15 @@ state = {
       
         <div className = "backgroundImage" >
         <LandingPage />
-        <button onClick={()=>{
+        <span className="centerTheButton">
+        <button className="enterButton" 
+          onClick={()=>{
           this.setState({visible:true});
         }}
         >
           Enter!
         </button>
+        </span>
         </div>
        
       )

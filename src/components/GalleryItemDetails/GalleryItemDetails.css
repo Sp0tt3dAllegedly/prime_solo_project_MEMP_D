@@ -1,8 +1,42 @@
+.detailsHeaderText {
+    text-shadow: -1px -1px 0 whitesmoke,
+    1px -1px 0 whitesmoke,
+    -1px 1px 0 whitesmoke,
+    1px 1px 0 whitesmoke;
+}
+
+
+.itemDiv {
+    position: center;
+    border: 5pt;
+    background-color: lightgrey;
+    max-width: 390px;
+    padding: 5px;
+}
+
+.itemDiv li {
+    padding: 10px;
+
+}
+
+.itemDetails {
+    
+    font-size: 12pt;
+    
+}
+
+.detailButtons {
+    height: 30px;
+    width: auto;
+}
+
 .galleryImageItem {
+    background-color: blanchedalmond;
     max-width: 300px;
     max-height: 300px;
     width: auto;
     height: auto;
     border: solid 5px black;
     margin: 35px 35px;
+    font-size: 36pt;
 }

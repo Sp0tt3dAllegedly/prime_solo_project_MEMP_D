@@ -1,6 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
+    background-color: khaki;
 }
 
 .alert {
@@ -23,7 +24,7 @@ input {
 }
 
 .log-in, .log-out, .register {
-  background-color: #00acb0;
+  background-color: grey;
   border-radius: 4px;
   color: #f8f8f8;
   min-height: 50px;
@@ -33,7 +34,7 @@ input {
 }
 
 .log-in:hover, .log-out:hover, .register:hover {
-  background-color: #008183;
+  background-color: black;
 }
 
 /* This line makes the "Register" and "Login" buttons look like links */
@@ -49,11 +50,17 @@ input {
 }
 
 .backgroundImage {
-    background-image: url('https://cdn180.picsart.com/231831737065202.jpg?r1024x1024');
-    background-color: #f6f312; /* Used if the image is unavailable */
+    /* background-image: url('https://cdn180.picsart.com/231831737065202.jpg?r1024x1024'); */
+    background-color: khaki; /* Used if the image is unavailable */
     height: stretch; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+
+
+.enterButton {
+    height: 30px;
+    width: auto;
+}
